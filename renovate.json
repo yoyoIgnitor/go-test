@@ -1,17 +1,19 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "enabledManagers": ["helm-values", "dockerfile", "gradle", "regex","gomod" ],
-    "autoApprove": true,
-    "customManagers": [
-      {
-        "fileMatch": ["^Makefile$"],
-        "matchStringsStrategy": "any",
-        "matchStrings": [
-          "PYTHON_BASE_IMAGE = (?<currentValue>.*?)\n"
-        ],
-        "datasourceTemplate": "artifactory",
-        "depNameTemplate": "kiranrenovate.jfrog.io/docker-remote"
-  
-  }
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "enabledManagers": ["gomod"],
+  "prConcurrentLimit": 40,
+  "prHourlyLimit": 0,
+  "branchConcurrentLimit": 20,
+  "regexManagers": [
+    {
+      "fileMatch": ["^go\\.mod$"],
+      "matchStrings": [
+        "github\\.com/yoyoIgnitor/go-modules/module1 (?<currentValue>module1-v[\\d\\.]+)"
+      ],
+      "datasourceTemplate": "git-tags",
+      "depNameTemplate": "github.com/yoyoIgnitor/go-modules/module1",
+      "lookupNameTemplate": "github.com/yoyoIgnitor/go-modules/module1",
+      "versioningTemplate": "semver"
+    }
   ]
-  }
+}
