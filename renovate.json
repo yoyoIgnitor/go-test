@@ -5,15 +5,15 @@
   "prHourlyLimit": 0,
   "branchConcurrentLimit": 20,
   "regexManagers": [
-    {
-      "fileMatch": ["^go\\.mod$"],
-      "matchStrings": [
-        "github\\.com/yoyoIgnitor/go-modules/module1 (?<currentValue>module1-v[\\d\\.]+)"
-      ],
-      "datasourceTemplate": "git-tags",
-      "depNameTemplate": "github.com/yoyoIgnitor/go-modules/module1",
-      "lookupNameTemplate": "github.com/yoyoIgnitor/go-modules/module1",
-      "versioningTemplate": "semver"
-    }
-  ]
+  {
+    "fileMatch": ["^go\\.mod$"],
+    "matchStrings": [
+      "github\\.com/yoyoIgnitor/go-modules/module1 (?<currentValue>module1-v[\\d\\.]+)"
+    ],
+    "datasourceTemplate": "git-tags",
+    "depNameTemplate": "github.com/yoyoIgnitor/go-modules/module1",
+    "lookupNameTemplate": "github.com/yoyoIgnitor/go-modules/module1",
+    "versioningTemplate": "semver"
+  }
+]
 }
