@@ -1,17 +1,11 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "packageRules": [
-      {
-        "matchManagers": ["gomod"],
-        "matchPackageNames": ["github.com/yoyoIgnitor/go-modules/module1"],
-        "datasource": "git-tags",
-        "versioning": "semver",
-        "versionCompatibility": "^(module1-v)(?<version>[\\d\\.]+)$",
-        "extractVersion": "^module1-v(?<version>[\\d\\.]+)$",
-        "lookupNameTemplate": "github.com/yoyoIgnitor/go-modules/module1",
-        "updateStrategy": "widen",
-        "semanticCommitType": "chore",
-        "semanticCommitScope": "deps"
-      }
-    ]
-  }
+    {
+      "matchManagers": ["gomod"],
+      "matchPackageNames": ["github.com/yoyoIgnitor/go-modules/module1"],
+      "versionCompatibility": "^(?<name>module1)-v(?<version>[\\d\\.]+)$",
+      "versioning": "semver"
+    }
+  ]
+}
