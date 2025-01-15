@@ -5,7 +5,9 @@
     {
       "matchManagers": ["gomod"],
       "matchPackageNames": ["github.com/yoyoIgnitor/go-modules/module1"],
-      "versioning": "semver"
+      "extractVersion": "^module1-v(?<version>[0-9]+\\.[0-9]+\\.[0-9]+)$",
+      "versioning": "semver",
+      "customRegistrySupport": true
     }
   ]
 }
