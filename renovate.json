@@ -3,10 +3,14 @@
   "enabledManagers": ["gomod"],
   "packageRules": [
     {
+      "matchPackageNames": [
+        "ghe.eng.sentinelone.tech/sentinel-one/epps-golang-common/mgmt-entities-loader"
+      ],
+      "enabled": true,
+      "versioning": "regex:^module1-v[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "matchSourceUrlPrefixes": ["https://github.com/yoyoIgnitor/go-modules"],
       "matchDatasources": ["git-tags"],
-      "matchPackageNames": ["github.com/yoyoIgnitor/go-modules/module1"],
-      "versioning": "semver",
-      "extractVersion": "v(?<version>[0-9]+\\.[0-9]+\\.[0-9]+)"
+      "allowedVersions": "^module1-v[0-9]+\\.[0-9]+\\.[0-9]+$"
     }
   ]
 }
