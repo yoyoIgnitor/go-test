@@ -7,14 +7,6 @@
       "matchDatasources": ["git-tags"],
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
       "versioning": "semver"
-    },
-    { "$schema": "https://docs.renovatebot.com/renovate-schema.json", 
-    "enabledManagers": ["gomod"], 
-    "packageRules": [ 
-      { "matchManagers": ["gomod"], 
-      "matchPackageNames": ["github.com/yoyoIgnitor/go-modules/module1"], 
-      "versioning": "semver", 
-      "versionCompatibility": "^(module1-)?v(?<version>[\\d\\.]+)$", 
-      "extractVersion": "v$<version>" } ] } 
+    } 
   ]
 }
