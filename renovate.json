@@ -3,8 +3,8 @@
   "enabledManagers": ["gomod", "ocb"],
   "packageRules": [
     {
-      "matchPackageNames": ["github.com/yoyoIgnitor/go-modules/module1"],
       "matchDatasources": ["git-tags"],
+      "matchPackageNames": ["github.com/yoyoIgnitor/go-modules/module1"],
       "versionCompatibility": "^(?<compatibility>.*)-(?<version>.*)$",
       "versioning": "semver"
     } 
