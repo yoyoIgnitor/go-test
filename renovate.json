@@ -5,8 +5,7 @@
     {
       "matchDatasources": ["git-tags"],
       "matchPackageNames": ["github.com/yoyoIgnitor/go-modules/module1"],
-      "extractVersion": "^module1-(?<version>.*)$",
-      "versioning": "semver"
+      "extractVersion": "^module1-(?<version>.*)$"
     } 
   ]
 }
